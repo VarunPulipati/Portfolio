@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Measuring Fatigue Dynamics of AR using Motion Capture Data",
+    "imageSrc": "projects/fatigue.jpg",
+    "description": ["Analyzed postural fatigue dynamics in augmented reality(AR) users, employing motion capture data to assess ergonomic and health impacts in digital learning environments using data analysis tools and Microsoft excel."," This project provides critical insights into the long term ergonomic consequences of the AR technology."],
+    "skills": ["React", "Express", "Node"],
+    "source": "https://github.com/VarunPulipati/Data-Manipulation-using-python"
+  },
+  {
+    "title": "Online Inventory Dealing Website for Hotels",
+    "imageSrc": "projects/house.png",
+    "description": "Developed an online inventory management website for hotels, featuring a user-friendly login/register system, admin control panel, and advanced inventory search capabilities. The platform also enables profile editing, requirement management, and collects customer feedback for continuous improvement.",
+    "skills": ["React", "Express", "Node", "Sass"],
+    "source": "https://github.com/VarunPulipati/Inventory-Management"
+  },
+
+  {
+    "title": "Twitter Data Analysis",
+    "imageSrc": "projects/twitter.png",
+    "description": "Built a compressive Twitter API in JAVA for complete streamline and analyzed large amounts of data from Twitter based on the use cases using Apache Spark and developed visualizations and displayed them by creating a dashboard using Angular.",
+    "skills": ["React", "Express", "Node", "Sass"],
+    "source": "https://github.com/VarunPulipati/Twitter-Data-Analysis"
+  },
+  {
+    "title": "Quality Prediction",
+    "imageSrc": "projects/quality.png",
+    "description": "Conducted predictive analytics on the wineQT dataset from Kaggle, utilizing advanced feature selection to optimize a Linear Regression model for wine quality assessment. This model enhanced wine selection transparency, providing consumers with data-driven insights for better-informed choices.",
+    "skills": ["React", "Express", "Node"],
+    "source": "https://github.com/VarunPulipati/Quality-Prediction"
+  },
+
+  {
+    "title": "Kubwatano Safaris",
+    "imageSrc": "projects/safari.png",
+    "description": "Conducted predictive analytics on the wineQT dataset from Kaggle, utilizing advanced feature selection to optimize a Linear Regression model for wine quality assessment. This model enhanced wine selection transparency, providing consumers with data-driven insights for better-informed choices.",
+    "skills": ["React", "Express", "Node"],
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Text Generation and Prediction",
+    "imageSrc": "projects/project.png",
+    "description": "Architected and fine-tuned a state-of-the-art Text Generation and Prediction model leveraging the power of Recurrent Neural Networks (RNN) and advanced LSTM deep learning techniques to achieve enhanced accuracy and efficiency.",
+    "skills": ["React", "Express", "Node"],
+    "source": "https://github.com/tonikazic/s22nlp/tree/master/Text-Generation"
+  }
+]

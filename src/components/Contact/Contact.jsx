@@ -1,0 +1,42 @@
+import React from "react";
+
+import styles from "./Contact.module.css";
+import { getImageUrl } from "../../../../react-portfolio/src/utils";
+
+export const Contact = () => {
+  return (
+    <footer id="contact" className={styles.container}>
+      <div className={styles.text}>
+        <h2>Contact</h2>
+        <p>Feel free to reach out!</p>
+      </div>
+      <ul className={styles.links}>
+        <li className={styles.link}>
+          <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
+          <a href="mailto:varunpulipati26@gmail.com">
+            varunpulipati26@gmail.com
+          </a>
+        </li>
+        <li className={styles.link}>
+          <img src={getImageUrl("contact/phoneIcon.png")} alt="Phone icon" />
+          <a href="tel:+15738101866">+1(573)-8101866</a>
+        </li>
+        <li className={styles.link}>
+          <img
+            src={getImageUrl("contact/linkedinIcon.png")}
+            alt="LinkedIn icon"
+          />
+          <a href="https://www.linkedin.com/in/varunpulipati/">
+            linkedin.com/varunpulipati
+          </a>
+        </li>
+        <li className={styles.link}>
+          <img src={getImageUrl("contact/githubIcon.png")} alt="Github icon" />
+          <a href="https://github.com/VarunPulipati">
+            github.com/varunpulipati
+          </a>
+        </li>
+      </ul>
+    </footer>
+  );
+};

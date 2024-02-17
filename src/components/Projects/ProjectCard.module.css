@@ -1,0 +1,127 @@
+@import "../../vars.css";
+
+.container {
+  width: 45%; /* Adjust the width as needed */
+  border-radius: 10px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures the image doesn't overflow the card's border */
+  position: relative; /* Establishes a stacking context for absolute children */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  margin-bottom: 2rem; /* Space between cards */
+  background-color: rgb(255, 255, 255);
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+}
+
+.image {
+  width: 100%; /* Image covers the entire width of the card */
+  height: auto; /* Adjust height automatically */
+  display: block; /* Remove any extra space beneath the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.title {
+  position: absolute; /* Absolute position relative to the container */
+  bottom: 20%; /* Position from the bottom of the image */
+  left: 0;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  color: white; /* Text color */
+  font-size: 1.5rem; /* Larger text size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+  padding: 0.5rem; /* Padding around the text */
+  background-color: rgba(0, 0, 0, 0.849); /* Semi-transparent overlay for text */
+}
+
+.description {
+  position: absolute; /* Absolute position relative to the container */
+  bottom: 10%; /* Position from the bottom of the image */
+  left: 0;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  color: white; /* Text color */
+  font-size: 1.25rem; /* Text size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+  padding: 0.5rem; /* Padding around the text */
+  background-color: rgba(0, 0, 0, 0.795); /* Semi-transparent overlay for text */
+}
+
+.skills {
+  list-style: none; /* Remove default list styling */
+  position: absolute; /* Absolute position relative to the container */
+  bottom: 5%; /* Position from the bottom of the image */
+  left: 0;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Layout the skills in a row */
+  justify-content: center; /* Center skills horizontally */
+  gap: 0.5rem; /* Space between skills */
+}
+
+.skill {
+  background-color: rgba(12, 12, 12, 0.829); /* Slightly darker overlay for contrast */
+  color: white; /* Text color */
+  padding: 0.2rem 0.5rem; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners for the skill tags */
+}
+
+.links {
+  display: none; /* Hide the links by default */
+}
+
+.container:hover .links {
+  display: block; /* Show the links on hover */
+  position: absolute; /* Absolute position relative to the container */
+  top: 10px; /* Position from the top of the card */
+  right: 10px; /* Position from the right of the card */
+}
+
+.link {
+  color: white; /* Text color */
+  background-color: rgba(214, 65, 65, 0.89); /* Background color for the link buttons */
+  padding: 0.5rem 1rem; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners for the buttons */
+  text-decoration: none; /* Remove underline from links */
+  margin-left: 0.5rem; /* Space between buttons */
+}
+
+/* Existing styles... */
+
+/* This will hide the text by default */
+ .description, .skills, .links {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Positioning for title, description, skills should already be set as absolute as per previous instructions */
+
+/* When the container is hovered over, these elements become visible */
+
+.container:hover .description,
+.container:hover .skills,
+.container:hover .links {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.container:hover .description {
+  bottom: 50%; /* Adjust as necessary for your design */
+}
+
+.container:hover .skills {
+  bottom: 40%; /* Background color for the link buttons */
+   /* Adjust as necessary for your design */
+}
+
+/* You might want to adjust the container's hover effect */
+.container:hover {
+  transform: translateY(0); /* Removes the lift effect if it interferes with readability */
+
+
+}

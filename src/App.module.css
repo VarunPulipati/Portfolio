@@ -1,0 +1,60 @@
+@import "./vars.css";
+
+.App {
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Other styles... */
+
+.resumeButton {
+  position: fixed; /* Fixed position to stay constant on the screen */
+  bottom: 50%; /* Position from the bottom, adjust as needed */
+  left: 0; /* Position at the left edge */
+  background-color: rgb(214, 67, 67); /* Red background color */
+  color: white; /* White text color */
+  padding: 10px; /* Padding to increase size */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+  font-size: 24px;
+  text-decoration: none; /* Remove underline from link */
+  z-index: 100; /* High z-index to ensure it's above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a "lifted" effect */
+  writing-mode: vertical-rl; /* Vertical text */
+  transform: rotate(180deg); /* Rotate text to be readable from bottom to top */
+  cursor: pointer; /* Cursor pointer to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.resumeButton:hover {
+  background-color: #cc0000; /* Darker red color on hover */
+}
+
+.resumeButton::after {
+  content: ''; /* Necessary for pseudo-elements */
+  position: absolute;
+  top: 50%; /* Position at the center of the button */
+  left: 100%; /* Position to the right of the button */
+  width: 50px; /* Width of the line, adjust as needed */
+  height: 2px; /* Height of the line */
+  background-color: rgba(12, 12, 12, 0.6); /* Semi-transparent black */
+  border-radius: 1px; /* Slight rounding at the edges */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 830px) {
+  .resumeButton {
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .resumeButton::after {
+    display: none; /* Hide the line on smaller screens if desired */
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "role": "Graduate Research Assistant",
+    "organisation": "Google",
+    "startDate": "May, 2023",
+    "endDate": "Present",
+    "experiences": ["Developed full-stack Django-React website.", "Created AR motion-sensing ML model achieving 80% precision.","Automated the entire process of collection and analysis with Python", "Contributed and Published 6 research papers"],
+    "imageSrc": "history/mu.png"
+  },
+  {
+    "role": "Teaching Assistant",
+    "organisation": "University of Missouri",
+    "startDate": "Aug, 2022",
+    "endDate": "May, 2023",
+    "experiences": ["Supported a emerging Management course.", "Facilitated lectures and graded tests and assignements for 500+ students."],
+    "imageSrc": "history/mu.png"
+  },
+  {
+    "role": "Software Engineer",
+    "organisation": "Accenture",
+    "startDate": "Apr, 2020",
+    "endDate": "Jun, 2020",
+    "experiences": [
+      "Led Python based data analysis.",
+      "Enhanced Django application and optimized Python code and APIs.",
+      "Managed and queried large databases and developed data visualization tools."
+    ],
+    "imageSrc": "history/Accenture.png"
+  },
+  {
+    "role": "Software Engineer Intern",
+    "organisation": "Kubwatano Safaris",
+    "startDate": "Dec, 2019",
+    "endDate": "Jun, 2020",
+    "experiences": [
+      "Boosted website engagement by 75% and Automated Social media Analytics.",
+      "Enhanced API integration and Automated content management."
+    ],
+    "imageSrc": "history/safari.png"
+  }
+]
