@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Hero.module.css";
-import { getImageUrl } from "../../../../react-portfolio/src/utils";
+import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
   const [showPopup, setShowPopup] = useState({
@@ -28,10 +28,10 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Varun Pulipati</h1>
         <p className={styles.description}>
-          Software Engineer with 3+ years of expertise in designing and
-          maintaining advanced applications with Python, Django, and data
-          analytics tools. Proven success in full-stack development and
-          analytics, with a keen aptitude for problem-solving.
+          Software Engineer with over 4 years of experience designing, building,
+          and deploying robust applications using Python, Django, and Flask.
+          Proven expertise in full-stack development, cloud integrations, and
+          RESTful API design.
         </p>
         <div className={styles.buttonRow}>
           <a
@@ -40,7 +40,6 @@ export const Hero = () => {
           >
             Connect
           </a>
-
           <button
             onClick={() => openPopup("skills")}
             className={styles.contactBtn}
@@ -55,31 +54,45 @@ export const Hero = () => {
           </button>
         </div>
 
-        {showPopup.skills &&
-          (console.log("Contact popup should show"),
-          (
-            <div className={styles.popup}>
-              <div className={styles.popupContent}>
-                <span className={styles.closeBtn} onClick={closePopup}>
-                  &times;
-                </span>
-                <h2>My Skills</h2>
+        {showPopup.skills && (
+          <div className={styles.popup}>
+            <div className={styles.popupContent}>
+              <span className={styles.closeBtn} onClick={closePopup}>
+                &times;
+              </span>
+              <h2>My Skills</h2>
+              <div className={styles.skillSection}>
+                <h3>Languages & Frameworks:</h3>
                 <p>
-                  <h3>Languages & Frameworks:</h3> Python, Java, C, SQL, Django,
-                  Flask, React.js, Angular. <h3>Web Development & Cloud :</h3>
-                  HTML, CSS, JavaScript, AWS, GCP, Azure, SDLC, Agile.
-                  <h3>Machine Learning & Analytics:</h3> Power BI, Comprehensive
-                  ML, JMP, Tableau, Spark, MATLAB.
-                  <h3>Data Management :</h3> MySQL, PostgreSQL, MongoDB, Big
-                  Data: HADOOP, Apache tools, Jira. <h3>IDEs and Tools:</h3>
-                  <p>
-                    Git, Jupyter, VS code, Docker, Kuberntes, CI/CD, RESTful API
-                    development.
-                  </p>
+                  Python 3+, Django, Flask, FastAPI, Pytest, Celery,
+                  Microservices, Kafka
+                </p>
+              </div>
+              <div className={styles.skillSection}>
+                <h3>Web Technologies:</h3>
+                <p>
+                  Django REST Framework, REST API, GraphQL, HTML5, CSS3,
+                  JavaScript
+                </p>
+              </div>
+              <div className={styles.skillSection}>
+                <h3>Databases & Data Management:</h3>
+                <p>
+                  PostgreSQL, MySQL, MongoDB, SQLite, Redis, NoSQL, AWS RDS,
+                  ETL, Data Warehousing (Redshift)
+                </p>
+              </div>
+              <div className={styles.skillSection}>
+                <h3>DevOps & Tools:</h3>
+                <p>
+                  AWS, Azure, Docker, Kubernetes, Git, GitHub, GitLab, CI/CD,
+                  Jenkins, Linux, Shell scripting, Jira, Postman, PyCharm, VS
+                  Code, Jupyter Notebook, NetBeans, IntelliJ
                 </p>
               </div>
             </div>
-          ))}
+          </div>
+        )}
 
         {showPopup.education && (
           <div className={styles.popup}>
@@ -88,25 +101,32 @@ export const Hero = () => {
                 &times;
               </span>
               <h2>Education</h2>
-              <h3>
-                University of Missouri, College of Engineering Columbia,
-                Missouri
-              </h3>{" "}
-              <p>Masters in Computer Science </p>
-              <p>2022-2024</p>
-              <h3>
-                Cherabuddi Venkata RaghavaRao College of Engineering Hyderabad,
-                India
-              </h3>
-              <p>Bachelor’s in Electronics and Communication Engineering</p>
-              <p>2016-2020</p>
+              <div className={styles.educationSection}>
+                <h3>
+                  University of Missouri, College of Engineering - Columbia,
+                  Missouri
+                </h3>
+                <p>Master of Science in Computer Science (2022 - 2024)</p>
+                <p>
+                  <strong>Relevant Courses:</strong> Data Analysis, Cloud
+                  Computing, Web Development, Big Data, Machine Learning,
+                  Advanced NLP
+                </p>
+              </div>
+              <div className={styles.educationSection}>
+                <h3>CVR, College of Engineering - Hyderabad, India</h3>
+                <p>
+                  Bachelor of Technology in Electronic and Computer Engineering
+                  (2016 - 2020)
+                </p>
+              </div>
             </div>
           </div>
         )}
       </div>
       <img
         src={getImageUrl("hero/pp.jpeg")}
-        alt="Hero image of me"
+        alt="Varun Pulipati"
         className={styles.heroImg}
       />
       <div className={styles.topBlur} />

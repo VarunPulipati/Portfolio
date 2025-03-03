@@ -27,20 +27,5 @@
     "description": "Conducted predictive analytics on the wineQT dataset from Kaggle, utilizing advanced feature selection to optimize a Linear Regression model for wine quality assessment. This model enhanced wine selection transparency, providing consumers with data-driven insights for better-informed choices.",
     "skills": ["React", "Express", "Node"],
     "source": "https://github.com/VarunPulipati/Quality-Prediction"
-  },
-
-  {
-    "title": "Kubwatano Safaris",
-    "imageSrc": "projects/safari.png",
-    "description": "Conducted predictive analytics on the wineQT dataset from Kaggle, utilizing advanced feature selection to optimize a Linear Regression model for wine quality assessment. This model enhanced wine selection transparency, providing consumers with data-driven insights for better-informed choices.",
-    "skills": ["React", "Express", "Node"],
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Text Generation and Prediction",
-    "imageSrc": "projects/project.png",
-    "description": "Architected and fine-tuned a state-of-the-art Text Generation and Prediction model leveraging the power of Recurrent Neural Networks (RNN) and advanced LSTM deep learning techniques to achieve enhanced accuracy and efficiency.",
-    "skills": ["React", "Express", "Node"],
-    "source": "https://github.com/tonikazic/s22nlp/tree/master/Text-Generation"
   }
 ]

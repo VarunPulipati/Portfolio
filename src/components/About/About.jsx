@@ -1,7 +1,6 @@
 import React from "react";
-
 import styles from "./About.module.css";
-import { getImageUrl } from "../../../../react-portfolio/src/utils";
+import { getImageUrl } from "../../utils";
 
 export const About = () => {
   return (
@@ -10,33 +9,32 @@ export const About = () => {
       <div className={styles.content}>
         <img
           src={getImageUrl("about/aboutimage.png")}
-          alt="Me sitting with a laptop"
+          alt="Varun working on a laptop"
           className={styles.aboutImage}
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
             <div className={styles.aboutItemText}>
-              <h3>Software Engineer</h3>
+              <h3>Python Developer</h3>
               <p>
-                Adept in full-stack web development, demonstrated through the
-                creation of advanced applications and websites, including a
-                real-time data display and storage platform, with a strong
-                foundation in both backend and frontend technologies.
+                Dedicated Python Developer with over 4 years of experience
+                designing, building, and deploying robust backend systems.
+                Expert in frameworks such as Django and Flask, with deep
+                proficiency in RESTful API development and cloud integrations
+                (AWS, Docker, Kubernetes).
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
             <div className={styles.aboutItemText}>
-              <h3>Data Analyst</h3>
+              <h3>Full Stack Engineer</h3>
               <p>
-                Proficient in leveraging Python for data analytics and machine
-                learning, with a track record of improving data processing
-                efficiency by 40%, contributing to healthcare service
-                enhancements, and authoring research on ergonomic challenges in
-                AR, showcasing a deep understanding of statistical analysis and
-                data visualization.
+                Skilled in integrating backend logic with modern front-end
+                frameworks to deliver comprehensive solutions. Proven track
+                record in enhancing system performance, optimizing code quality,
+                and driving scalable software delivery in Agile environments.
               </p>
             </div>
           </li>

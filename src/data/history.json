@@ -1,40 +1,49 @@
 [
   {
-    "role": "Graduate Research Assistant",
-    "organisation": "Google",
-    "startDate": "May, 2023",
+    "role": "Software Development Engineer",
+    "organisation": "Syneos Health",
+    "startDate": "July, 2024",
     "endDate": "Present",
-    "experiences": ["Developed full-stack Django-React website.", "Created AR motion-sensing ML model achieving 80% precision.","Automated the entire process of collection and analysis with Python", "Contributed and Published 6 research papers"],
-    "imageSrc": "history/mu.png"
-  },
-  {
-    "role": "Teaching Assistant",
-    "organisation": "University of Missouri",
-    "startDate": "Aug, 2022",
-    "endDate": "May, 2023",
-    "experiences": ["Supported a emerging Management course.", "Facilitated lectures and graded tests and assignements for 500+ students."],
+    "experiences": [
+      "Developed RESTful APIs and backend modules using Python (Django, Flask) while integrating real-time data pipelines with Kafka.",
+      "Integrated AWS services (S3, Lambda, SQS, ECS) and automated deployment pipelines using Docker, Kubernetes, and Jenkins, significantly improving system scalability.",
+      "Implemented comprehensive testing strategies with Pytest, conducted code reviews using Git, and collaborated with cross-functional teams under agile methodologies to ensure HIPAA-compliant software delivery."
+    ],
     "imageSrc": "history/mu.png"
   },
   {
     "role": "Software Engineer",
-    "organisation": "Accenture",
-    "startDate": "Apr, 2020",
-    "endDate": "Jun, 2020",
+    "organisation": "Human Factors Lab | NSF",
+    "startDate": "Aug, 2022",
+    "endDate": "May, 2024",
     "experiences": [
-      "Led Python based data analysis.",
-      "Enhanced Django application and optimized Python code and APIs.",
-      "Managed and queried large databases and developed data visualization tools."
+      "Engineered a real-time platform using Python (Django) and React, integrating Microsoft HoloLens AR with Unity-based interactive experiences and Xsens Motion Capture SDKs.",
+      "Deployed the application on AWS for enhanced scalability and reliability.",
+      "Designed an ML model scoring system (0–100) to quantify user fatigue with 80% precision, integrating multi-sensor inputs for AR scene transitions."
+    ],
+    "imageSrc": "history/mu.png"
+  },
+  {
+    "role": "Associate Software Engineer",
+    "organisation": "Accenture Solutions | CVS Health",
+    "startDate": "Aug, 2020",
+    "endDate": "Dec, 2021",
+    "experiences": [
+      "Enhanced 5 key backend healthcare claims fraud detection applications using Python frameworks and rigorous Pytest-based testing, achieving a 20% improvement in fraud detection accuracy.",
+      "Developed Python-driven REST APIs (SQLAlchemy, PostgreSQL) processing over 10K claims daily, increasing flagged fraudulent claims by 25%.",
+      "Automated API key synchronization with Boto3, reducing manual workload by 85% and resolving 1000+ incidents with a 20-minute response time."
     ],
     "imageSrc": "history/Accenture.png"
   },
   {
-    "role": "Software Engineer Intern",
-    "organisation": "Kubwatano Safaris",
-    "startDate": "Dec, 2019",
-    "endDate": "Jun, 2020",
+    "role": "Software Engineer",
+    "organisation": "Nxp Net Solutions | Cashify",
+    "startDate": "Jan, 2019",
+    "endDate": "July, 2020",
     "experiences": [
-      "Boosted website engagement by 75% and Automated Social media Analytics.",
-      "Enhanced API integration and Automated content management."
+      "Implemented over 15 features, resolved 30+ bugs, and developed unit tests achieving 95% code coverage for containerized Python-based applications (Flask) integrated with a Vue.js front end.",
+      "Collaborated in an agile environment, conducting 50+ code reviews and performing comprehensive unit testing.",
+      "Contributed to CI/CD pipeline enhancements that accelerated deployment times by 35% and reduced system downtime by 15%."
     ],
     "imageSrc": "history/safari.png"
   }

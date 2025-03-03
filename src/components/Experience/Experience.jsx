@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import styles from "./Experience.module.css";
-import skills from "../../../../react_portfolio/src/data/skills.json";
-import history from "../../../../react_portfolio/src/data/history.json";
-import { getImageUrl } from "../../../../react_portfolio/src/utils";
+import skills from "../../data/skills.json";
+import history from "../../data/history.json";
+import { getImageUrl } from "../../utils";
 
 export const Experience = () => {
   // State to hold the active skills

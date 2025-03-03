@@ -1,162 +1,208 @@
 @import "../../vars.css";
 
+/* Container for Hero section */
 .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 50px auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
+/* Content styling */
 .content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
   color: var(--color-text);
-  z-index: 1;
+  padding: 2rem;
 }
 
+/* Title with gradient text */
 .title {
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 900;
-  margin-bottom: 33px;
+  margin-bottom: 1.5rem;
   font-family: var(--font-roboto);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-  );
+  background: linear-gradient(90deg, #ffffff 70%, rgba(255,255,255,0) 120%);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 
+/* Description styling */
 .description {
-  font-size: 25px;
+  font-size: 1.56rem;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
 }
 
+/* Contact button styling with hover effect */
 .contactBtn {
-  display: flex;
-  flex-direction: row; /* Align children side by side */
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   text-decoration: none;
   background-color: var(--color-primary);
   color: var(--color-text);
-  border-radius: 100px;
-  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.25rem;
   font-weight: 600;
-  padding: 17px 26px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
-  margin: 10px;
-  align-items: center;
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.contactBtn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Button row layout */
 .buttonRow {
-  display: flex; /* Use flexbox */
-  flex-direction: row; /* Arrange children in a row */
-  justify-content: center; /* Center the buttons horizontally */
-  gap: 10px; /* Adjust the gap between buttons as needed */
-  margin-top: 10px; /* Add some space between the description and the buttons */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
+/* Hero image styling with floating animation */
 .heroImg {
-  width: 30%;
-  height: 50%;
-  z-index: 1;
-
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  flex: 1;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+  object-fit: cover;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Blurred background elements */
+.topBlur, .bottomBlur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
 }
 
 .topBlur {
-  position: absolute;
-  width: 50vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 350px;
-  top: -128px;
-  left: -10vw;
-  border-radius: 764px;
+  width: 40vw;
+  height: 40vw;
+  top: -10vw;
+  left: -15vw;
   background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
 .bottomBlur {
-  position: absolute;
-  width: 70vw;
+  width: 50vw;
   height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
-  top: 246px;
-  right: -25vw;
-  border-radius: 764px;
+  bottom: -20vw;
+  right: -20vw;
   background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
-@media screen and (max-width: 830px) {
-  .container {
-    flex-direction: column-reverse;
-  }
-
-  .content {
-    align-items: center;
-  }
-}
-
+/* Popup overlay (dark background) */
 .popup {
-  position:relative;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(12, 12, 12, 0.6);
-  display:flex;
-  justify-content: center;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
   align-items: center;
-  z-index: 1000; /* High z-index to ensure it's above other content */
+  justify-content: flex-start; /* Place content on the left side */
+  padding-left: 5%; /* Add horizontal space from the left edge */
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
 }
 
 /* Popup content box */
 .popupContent {
-  background-color: rgba(12, 12, 12, 0.6);
-  border-radius: 25px;
-  padding: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   position: relative;
-  width: 100%;
-  max-width: 1000px; /* Adjust the max-width as needed */
-  z-index: 1000;
+  animation: slideUp 0.4s ease-out;
 }
 
-/* Close button for popup */
+/* Close button */
 .closeBtn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 30px;
-  color: #797979;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #444;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  z-index: 1002;
 }
 
+/* Skill and Education section styling */
+.skillSection, .educationSection {
+  margin-bottom: 1.5rem;
+}
 
+.skillSection h3, .educationSection h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.skillSection p, .educationSection p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); }
+  to { transform: translateY(0); }
+}
+
+/* Responsive design */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+  .heroImg {
+    margin-top: 2rem;
+    max-width: 300px;
+    z-index: 1;
+  }
+}
