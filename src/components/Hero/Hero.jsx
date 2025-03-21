@@ -28,11 +28,15 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Varun Pulipati</h1>
         <p className={styles.description}>
-          Software Engineer with over 4 years of experience designing, building,
-          and deploying robust applications using Python, Django, and Flask.
-          Proven expertise in full-stack development, cloud integrations, and
-          RESTful API design.
+          Data Scientist with a strong background in machine learning,
+          predictive analytics, and full-stack development. Proven track record
+          of improving business outcomes through AI-driven insights, automation,
+          and scalable data solutions. Expertise in Python, TensorFlow, PyTorch,
+          cloud platforms (AWS, Azure), and big data technologies like Apache
+          Spark and Kafka. Passionate about leveraging data science to drive
+          strategic decision-making and optimize operational efficiencies.
         </p>
+
         <div className={styles.buttonRow}>
           <a
             href="mailto:varunpulipati26@gmail.com"
@@ -54,6 +58,43 @@ export const Hero = () => {
           </button>
         </div>
 
+        {/* Social Links Section */}
+        <div className={styles.socialRow}>
+          <a
+            href="https://www.linkedin.com/in/varunpulipati"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={getImageUrl("contact/linkedinIcon.png")}
+              alt="LinkedIn"
+              className={styles.socialIcon}
+            />
+          </a>
+          <a
+            href="https://github.com/VarunPulipati"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={getImageUrl("contact/githubIcon.png")}
+              alt="GitHub"
+              className={styles.socialIcon}
+            />
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=yourID"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={getImageUrl("contact/Google_Scholar.png")}
+              alt="Google Scholar"
+              className={styles.socialIcon}
+            />
+          </a>
+        </div>
+
         {showPopup.skills && (
           <div className={styles.popup}>
             <div className={styles.popupContent}>
@@ -62,32 +103,37 @@ export const Hero = () => {
               </span>
               <h2>My Skills</h2>
               <div className={styles.skillSection}>
-                <h3>Languages & Frameworks:</h3>
+                <h3>Languages & Programming:</h3>
                 <p>
-                  Python 3+, Django, Flask, FastAPI, Pytest, Celery,
-                  Microservices, Kafka
+                  Python, SQL, Django, Flask, React, Big Data Tools (Apache
+                  Spark, Kafka, Hadoop)
                 </p>
               </div>
               <div className={styles.skillSection}>
-                <h3>Web Technologies:</h3>
+                <h3>DevOps & Cloud:</h3>
                 <p>
-                  Django REST Framework, REST API, GraphQL, HTML5, CSS3,
-                  JavaScript
+                  AWS, Azure, Docker, Kubernetes, SDLC, Agile, Git, CI/CD,
+                  Jenkins, Linux, Shell scripting.
                 </p>
               </div>
               <div className={styles.skillSection}>
-                <h3>Databases & Data Management:</h3>
+                <h3>Machine Learning</h3>
                 <p>
-                  PostgreSQL, MySQL, MongoDB, SQLite, Redis, NoSQL, AWS RDS,
-                  ETL, Data Warehousing (Redshift)
+                  Scikit-learn, TensorFlow, Hugging Face, PyTorch, Open AI, NLP
+                  & LLMs, Power BI, Tableau
                 </p>
               </div>
               <div className={styles.skillSection}>
-                <h3>DevOps & Tools:</h3>
+                <h3>Analytics & Modeling:</h3>
                 <p>
-                  AWS, Azure, Docker, Kubernetes, Git, GitHub, GitLab, CI/CD,
-                  Jenkins, Linux, Shell scripting, Jira, Postman, PyCharm, VS
-                  Code, Jupyter Notebook, NetBeans, IntelliJ
+                  Data Governance & Quality Assurance, A/B Testing, Predictive
+                  Modeling, Feature Selection, Clustering, Statistical Analysis.
+                </p>
+              </div>
+              <div className={styles.skillSection}>
+                <h3>Data Management</h3>
+                <p>
+                  MySQL, PostgreSQL, MongoDB, ETL, Data Warehousing(Redshift).
                 </p>
               </div>
             </div>
@@ -102,22 +148,24 @@ export const Hero = () => {
               </span>
               <h2>Education</h2>
               <div className={styles.educationSection}>
-                <h3>
+                <h3>Master of Science in Computer Science</h3>
+                <p>
                   University of Missouri, College of Engineering - Columbia,
-                  Missouri
-                </h3>
-                <p>Master of Science in Computer Science (2022 - 2024)</p>
+                  Missouri (2022 - 2024)
+                </p>
                 <p>
                   <strong>Relevant Courses:</strong> Data Analysis, Cloud
                   Computing, Web Development, Big Data, Machine Learning,
                   Advanced NLP
                 </p>
               </div>
+
               <div className={styles.educationSection}>
-                <h3>CVR, College of Engineering - Hyderabad, India</h3>
-                <p>
+                <h3>
                   Bachelor of Technology in Electronic and Computer Engineering
-                  (2016 - 2020)
+                </h3>
+                <p>
+                  CVR College of Engineering - Hyderabad, India (2016 - 2020)
                 </p>
               </div>
             </div>
@@ -131,6 +179,9 @@ export const Hero = () => {
       />
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />
+      <div className={styles.emailLink}>
+        <a href="mailto:varunpulipati26@gmail.com">varunpulipati26@gmail.com</a>
+      </div>
     </section>
   );
 };

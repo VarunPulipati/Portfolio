@@ -1,26 +1,106 @@
 @import "../../vars.css";
 
+/* Main Container */
 .container {
   margin-top: 76px;
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
+  text-align: center;
 }
 
+/* Section Title */
 .title {
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Title Hover Animation */
+.title:hover {
+  transform: scale(1.05);
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.title:hover::after {
+  width: 100px;
+}
+
+/* Projects Grid */
 .projects {
   margin-top: 37px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 30px;
   width: 100%;
+  align-items: stretch;
+}
+
+/* Project Card */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 420px;
+  max-width: 500px;
+  width: 45%;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(30, 30, 30, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+}
+
+/* Project Card Hover Effect */
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(40, 40, 40, 0.9);
+}
+
+/* Image Hover Effect */
+.projectCard:hover img {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 830px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCard {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 35px;
+  }
 }

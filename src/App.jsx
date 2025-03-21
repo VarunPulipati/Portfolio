@@ -17,7 +17,7 @@ function App() {
       <Contact />
       {/* Resume Button */}
       <a
-        href="resume.pdf"
+        href="Varun_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.resumeButton}

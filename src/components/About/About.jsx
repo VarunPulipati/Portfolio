@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBrain, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 export const About = () => {
   return (
@@ -14,27 +16,40 @@ export const About = () => {
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
+            <FontAwesomeIcon
+              icon={faBrain}
+              size="2x"
+              className={styles.icon}
+              style={{ marginRight: "15px" }} // Added spacing
+            />
             <div className={styles.aboutItemText}>
-              <h3>Python Developer</h3>
+              <h3>Data Scientist</h3>
               <p>
-                Dedicated Python Developer with over 4 years of experience
-                designing, building, and deploying robust backend systems.
-                Expert in frameworks such as Django and Flask, with deep
-                proficiency in RESTful API development and cloud integrations
-                (AWS, Docker, Kubernetes).
+                Data Scientist with expertise in AI/ML-driven insights,
+                predictive analytics, and automation. Proven track record in
+                developing self-learning models that enhance decision-making and
+                optimize business strategies. Skilled in TensorFlow, PyTorch,
+                Scikit-learn, and NLP, with experience in deploying scalable
+                solutions on AWS, Azure, and Kubernetes.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
+            <FontAwesomeIcon
+              icon={faRobot}
+              size="2x"
+              className={styles.icon}
+              style={{ marginRight: "15px" }} // Added spacing
+            />
             <div className={styles.aboutItemText}>
-              <h3>Full Stack Engineer</h3>
+              <h3>Machine Learning Engineer</h3>
               <p>
-                Skilled in integrating backend logic with modern front-end
-                frameworks to deliver comprehensive solutions. Proven track
-                record in enhancing system performance, optimizing code quality,
-                and driving scalable software delivery in Agile environments.
+                Experienced in building end-to-end machine learning pipelines,
+                from data processing to deployment. Specialized in model
+                optimization, feature engineering, and big data processing using
+                Apache Spark and Kafka. Adept at integrating AI models into
+                production environments, ensuring high-performance and scalable
+                ML solutions.
               </p>
             </div>
           </li>

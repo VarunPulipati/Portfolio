@@ -1,92 +1,245 @@
 @import "../../vars.css";
 
+/* Use a modern, elegant font */
+* {
+  font-family: "Poppins", "Lora", serif;
+}
+
+/* Container for Experience Section */
 .container {
+  font-family: "Poppins", sans-serif;
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
+  background: linear-gradient(135deg, rgba(12, 12, 12, 0.9) 10%, rgba(25, 55, 109, 0.85) 90%);
   border-radius: 15px;
-  padding: 73px;
-  margin-top: 129px;
+  padding: 60px;
+  margin-top: 100px;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
 }
 
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Title Styling */
 .title {
-  color: var(--color-text);
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 1.75px;
+  font-family: "Lora", serif;
+  font-size: 42px;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.6));
+
+  /* Vendor Prefixes for Text Fill and Background Clip */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: transform 0.3s ease-in-out;
 }
 
+.title:hover {
+  transform: scale(1.05);
+}
+
+/* Experience Content Layout */
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 14px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
+/* Animated Skills Section */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skillBadge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 14px 22px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.skillBadge:hover {
+  background: var(--color-primary);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Timeline Styled History */
 .history {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
+  position: relative;
+  padding-left: 30px;
 }
 
+/* Timeline Indicator */
+.history::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-primary), rgba(255, 255, 255, 0.2));
+  border-radius: 2px;
+}
+
+/* Experience Cards */
 .historyItem {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 17px;
-  background: #19376d;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 10px;
-  padding: 24px;
+  gap: 25px;
+  background: linear-gradient(90deg, rgba(25, 55, 109, 0.85) 0%, rgba(12, 12, 12, 0.7) 100%);
+  border-radius: 12px;
+  padding: 28px;
+  position: relative;
+  margin-left: 60px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
 }
 
+.historyItem:hover {
+  background: linear-gradient(90deg, rgba(12, 12, 12, 0.95), rgba(25, 55, 109, 0.95));
+  transform: scale(1.03);
+}
+
+/* Circular Timeline Points */
+.historyItem::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+/* Company Logos */
 .historyItem img {
-  width: 50px;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  transition: transform 0.3s ease;
 }
 
+.historyItem img:hover {
+  transform: scale(1.1);
+}
+
+/* Experience Details */
 .historyItemDetails {
-  font-family: var(--font-roboto);
   color: white;
 }
 
 .historyItemDetails h3 {
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .historyItemDetails p {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
+  opacity: 0.85;
+  font-style: italic;
 }
 
+/* Bullet Points */
 .historyItemDetails ul {
-  margin-top: 6px;
-  list-style-position: inside;
-  font-size: 20px;
-  list-style-type: disc;
-  margin-left: 17px;
+  margin-top: 8px;
+  list-style: none;
+  font-size: 19px;
+  padding-left: 0;
 }
 
+.historyItemDetails ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.historyItemDetails ul li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 830px) {
+  .container {
+    padding: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
-    gap: 34px;
-  }
-
-  .skills {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+    gap: 40px;
   }
 
   .history {
     width: 100%;
-    gap: 9px;
+    gap: 30px;
+    padding-left: 15px;
+  }
+
+  .historyItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    margin-left: 0;
+  }
+
+  .historyItem::before {
+    left: -18px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .historyItem img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .historyItemDetails h3 {
+    font-size: 22px;
+  }
+
+  .historyItemDetails p {
+    font-size: 15px;
+  }
+
+  .historyItemDetails ul li {
+    font-size: 17px;
   }
 }
-

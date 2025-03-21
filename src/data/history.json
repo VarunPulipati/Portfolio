@@ -1,50 +1,37 @@
 [
   {
-    "role": "Software Development Engineer",
-    "organisation": "Syneos Health",
+    "role": "Data Scientist",
+    "organisation": "Technet.ai",
     "startDate": "July, 2024",
     "endDate": "Present",
     "experiences": [
-      "Developed RESTful APIs and backend modules using Python (Django, Flask) while integrating real-time data pipelines with Kafka.",
-      "Integrated AWS services (S3, Lambda, SQS, ECS) and automated deployment pipelines using Docker, Kubernetes, and Jenkins, significantly improving system scalability.",
-      "Implemented comprehensive testing strategies with Pytest, conducted code reviews using Git, and collaborated with cross-functional teams under agile methodologies to ensure HIPAA-compliant software delivery."
+      "Boosted sales forecast accuracy by 25% by developing self-learning AI/ML models for product demand prediction, directly enhancing marketing strategies and financial planning.",
+      "Accelerated model deployment by 40% through building scalable ML pipelines using TensorFlow, PyTorch, and Kubernetes, reducing time-to-market for new insights. ","Improved revenue-generating decision-making by delivering predictive analytics across customer behavior and sales trends."
     ],
-    "imageSrc": "history/mu.png"
+    "imageSrc": "history/technet-logo.svg"
   },
   {
-    "role": "Software Engineer",
+    "role": "Research Analyst",
     "organisation": "Human Factors Lab | NSF",
     "startDate": "Aug, 2022",
     "endDate": "May, 2024",
     "experiences": [
-      "Engineered a real-time platform using Python (Django) and React, integrating Microsoft HoloLens AR with Unity-based interactive experiences and Xsens Motion Capture SDKs.",
-      "Deployed the application on AWS for enhanced scalability and reliability.",
-      "Designed an ML model scoring system (0–100) to quantify user fatigue with 80% precision, integrating multi-sensor inputs for AR scene transitions."
+      "Developed a real-time analytics platform to detect fatigue in industrial environments, reducing assessment time by 40% using Django/React and Microsoft AR motion tracking.",
+      "Designed an ML model scoring system (0–100) to quantify user fatigue with 80% precision, integrating multi-sensor inputs for AR scene transitions.",
+      "Built and orchestrated an ETL pipeline in PostgreSQL & Python, processing 500K+ data points per session, reducing latency by 40% and improving ML model training efficiency."
     ],
     "imageSrc": "history/mu.png"
   },
   {
-    "role": "Associate Software Engineer",
+    "role": "Data Analyst",
     "organisation": "Accenture Solutions | CVS Health",
     "startDate": "Aug, 2020",
     "endDate": "Dec, 2021",
     "experiences": [
-      "Enhanced 5 key backend healthcare claims fraud detection applications using Python frameworks and rigorous Pytest-based testing, achieving a 20% improvement in fraud detection accuracy.",
-      "Developed Python-driven REST APIs (SQLAlchemy, PostgreSQL) processing over 10K claims daily, increasing flagged fraudulent claims by 25%.",
-      "Automated API key synchronization with Boto3, reducing manual workload by 85% and resolving 1000+ incidents with a 20-minute response time."
+      "Enhanced patient care decision-making by identifying high-risk claims using Python-driven outlier fraud detection, improving early intervention by 20% on 500K+ healthcare claim records.",
+      "Integrated ML model predictions into strategic decision-making processes, achieving a 15% improvement in operational accuracy and significantly enhancing resource utilization.",
+      "Built SQL pipelines, interactive Power BI dashboards, and implemented data warehousing solutions using AWS services."
     ],
     "imageSrc": "history/Accenture.png"
-  },
-  {
-    "role": "Software Engineer",
-    "organisation": "Nxp Net Solutions | Cashify",
-    "startDate": "Jan, 2019",
-    "endDate": "July, 2020",
-    "experiences": [
-      "Implemented over 15 features, resolved 30+ bugs, and developed unit tests achieving 95% code coverage for containerized Python-based applications (Flask) integrated with a Vue.js front end.",
-      "Collaborated in an agile environment, conducting 50+ code reviews and performing comprehensive unit testing.",
-      "Contributed to CI/CD pipeline enhancements that accelerated deployment times by 35% and reduced system downtime by 15%."
-    ],
-    "imageSrc": "history/safari.png"
   }
 ]

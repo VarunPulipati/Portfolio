@@ -1,4 +1,15 @@
 @import "../../vars.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
 
 /* Container for Hero section */
 .container {
@@ -28,23 +39,41 @@
 }
 
 /* Title with gradient text */
+/* Title with gradient text */
 .title {
-  font-size: 3.75rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  font-family: var(--font-roboto);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
   background: linear-gradient(90deg, #ffffff 70%, rgba(255,255,255,0) 120%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  animation: slideInLeft 1s ease-out 0.2s both;
+
 }
 
 /* Description styling */
 .description {
-  font-size: 1.56rem;
-  font-family: var(--font-roboto);
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+
+  /* Delayed Slide Animation */
+  animation: slideInLeft 1s ease-out 0.4s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Contact button styling with hover effect */
@@ -57,7 +86,7 @@
   color: var(--color-text);
   border: none;
   border-radius: 50px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0.85rem 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -65,6 +94,25 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+/* Social Media Row */
+.socialRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Social Icons */
+.socialIcon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
 
 .contactBtn:hover {
   background-color: var(--color-primary-dark);
@@ -78,6 +126,58 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* Email Link - Fixed on the Bottom Right */
+.emailLink {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+}
+
+/* Email Text Styling */
+.emailLink a {
+  writing-mode: vertical-rl; /* Rotates text vertically */
+  transform: rotate(180deg); /* Flips text for better readability */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect */
+.emailLink a:hover {
+  color: var(--color-primary);
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* Line Separator */
+.emailLink::after {
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: var(--color-text);
+  display: block;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .emailLink {
+    bottom: 3%;
+    right: 1%;
+  }
+
+  .emailLink a {
+    font-size: 14px;
+  }
 }
 
 /* Hero image styling with floating animation */

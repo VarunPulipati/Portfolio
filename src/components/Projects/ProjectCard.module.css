@@ -1,127 +1,173 @@
 @import "../../vars.css";
 
-.container {
-  width: 45%; /* Adjust the width as needed */
-  border-radius: 10px; /* Rounded corners for the card */
-  overflow: hidden; /* Ensures the image doesn't overflow the card's border */
-  position: relative; /* Establishes a stacking context for absolute children */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-  margin-bottom: 2rem; /* Space between cards */
-  background-color: rgb(255, 255, 255);
+/* Use a more professional font */
+* {
+  font-family: "Times New Roman", Times, serif;
 }
 
-.container:hover {
-  transform: translateY(-5px); /* Slight raise effect on hover */
+/* Project Card */
+.projectCard {
+  width: 45%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(30, 30, 30, 0.85);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-.image {
-  width: 100%; /* Image covers the entire width of the card */
-  height: auto; /* Adjust height automatically */
-  display: block; /* Remove any extra space beneath the image */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
+/* Hover Effect */
+.projectCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(40, 40, 40, 0.9);
 }
 
-.title {
-  position: absolute; /* Absolute position relative to the container */
-  bottom: 20%; /* Position from the bottom of the image */
-  left: 0;
-  width: 100%; /* Full width */
-  text-align: center; /* Center the text */
-  color: white; /* Text color */
-  font-size: 1.5rem; /* Larger text size */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
-  padding: 0.5rem; /* Padding around the text */
-  background-color: rgba(0, 0, 0, 0.849); /* Semi-transparent overlay for text */
-}
-
-.description {
-  position: absolute; /* Absolute position relative to the container */
-  bottom: 10%; /* Position from the bottom of the image */
-  left: 0;
-  width: 100%; /* Full width */
-  text-align: center; /* Center the text */
-  color: white; /* Text color */
-  font-size: 1.25rem; /* Text size */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
-  padding: 0.5rem; /* Padding around the text */
-  background-color: rgba(0, 0, 0, 0.795); /* Semi-transparent overlay for text */
-}
-
-.skills {
-  list-style: none; /* Remove default list styling */
-  position: absolute; /* Absolute position relative to the container */
-  bottom: 5%; /* Position from the bottom of the image */
-  left: 0;
-  width: 100%; /* Full width */
-  text-align: center; /* Center the text */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Layout the skills in a row */
-  justify-content: center; /* Center skills horizontally */
-  gap: 0.5rem; /* Space between skills */
-}
-
-.skill {
-  background-color: rgba(12, 12, 12, 0.829); /* Slightly darker overlay for contrast */
-  color: white; /* Text color */
-  padding: 0.2rem 0.5rem; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners for the skill tags */
-}
-
-.links {
-  display: none; /* Hide the links by default */
-}
-
-.container:hover .links {
-  display: block; /* Show the links on hover */
-  position: absolute; /* Absolute position relative to the container */
-  top: 10px; /* Position from the top of the card */
-  right: 10px; /* Position from the right of the card */
-}
-
-.link {
-  color: white; /* Text color */
-  background-color: rgba(214, 65, 65, 0.89); /* Background color for the link buttons */
-  padding: 0.5rem 1rem; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners for the buttons */
-  text-decoration: none; /* Remove underline from links */
-  margin-left: 0.5rem; /* Space between buttons */
-}
-
-/* Existing styles... */
-
-/* This will hide the text by default */
- .description, .skills, .links {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* Positioning for title, description, skills should already be set as absolute as per previous instructions */
-
-/* When the container is hovered over, these elements become visible */
-
-.container:hover .description,
-.container:hover .skills,
-.container:hover .links {
+/* 🔴 Source Code Button in Top Right */
+.sourceCodeContainer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 95, 95, 0.845);
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(255, 59, 59, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   opacity: 1;
-  visibility: visible;
+  z-index: 10;
 }
 
-
-
-.container:hover .description {
-  bottom: 50%; /* Adjust as necessary for your design */
+.sourceCodeContainer:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(255, 0, 0, 0.413);
 }
 
-.container:hover .skills {
-  bottom: 40%; /* Background color for the link buttons */
-   /* Adjust as necessary for your design */
+/* Source Code Button Text */
+.sourceCodeLink {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-/* You might want to adjust the container's hover effect */
-.container:hover {
-  transform: translateY(0); /* Removes the lift effect if it interferes with readability */
+/* Project Image */
+.image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
 
+.projectCard:hover .image {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+}
 
+/* Project Title */
+.projectTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 12px;
+  margin-top: -5px;
+  border-radius: 6px;
+}
+
+/* 🔥 Improved Description Box */
+.projectDescription {
+  font-size: 1.2rem;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 10px;
+  line-height: 1.5;
+  max-width: 90%;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  text-align: justify;
+}
+
+/* 🔥 Project Links */
+.projectLinks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Live Demo Button */
+.projectLink.demo {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.projectLink.demo:hover {
+  background: linear-gradient(135deg, #218838, #19692c);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.6);
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 830px) {
+  .projectCard {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .sourceCodeContainer {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+  }
+
+  .sourceCodeLink {
+    font-size: 0.8rem;
+  }
+
+  .image {
+    height: 220px;
+  }
+
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+
+  .projectDescription {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .projectLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectLink.demo {
+    width: 80%;
+    text-align: center;
+  }
 }

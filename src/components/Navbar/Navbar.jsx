@@ -5,7 +5,7 @@ import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const resumeUrl = "/resume.pdf";
+  const resumeUrl = "Varun_Resume.pdf";
   return (
     <nav className={styles.navbar}>
       <a className={styles.title} href="/">
